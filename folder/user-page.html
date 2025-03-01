@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Rental - Rent Electric Vehicles</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F2F2F2; /* Light background */
+            color: #333333; /* Dark text for better readability */
+        }
+
+        /* Header Section */
+        header {
+            background-color: #131921; /* Dark header */
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .navbar .logo a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #F29C11; /* Warm color for the logo */
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #F2F2F2; /* Light grey links */
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #F29C11; /* Highlight color on hover */
+        }
+
+        /* Vehicle Listings Section */
+        .vehicle-listings {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid for multiple vehicles */
+            gap: 30px;
+            padding: 40px 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Vehicle Card */
+        .vehicle-card {
+            background-color: #FFFFFF; /* White background for the vehicle card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for card effect */
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+            overflow: hidden;
+        }
+
+        .vehicle-card:hover {
+            transform: scale(1.05); /* Scale the card slightly on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        }
+
+        .vehicle-image img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .vehicle-image img:hover {
+            transform: scale(1.1); /* Zoom effect on image hover */
+        }
+
+        .vehicle-info {
+            padding: 20px;
+            color: #333333;
+        }
+
+        .vehicle-info h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #131921; /* Dark color for the heading */
+        }
+
+        .vehicle-description {
+            font-size: 14px;
+            color: #555555; /* Slightly lighter grey */
+            margin-bottom: 20px;
+        }
+
+        .vehicle-specs p {
+            font-size: 14px;
+            color: #666666;
+            margin: 5px 0;
+        }
+
+        .rent-now {
+            margin-top: 30px;
+        }
+
+        .rent-button {
+            background-color: #F29C11; /* Warm orange for button */
+            color: white;
+            font-size: 18px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .rent-button:hover {
+            background-color: #FFDDC1; /* Light orange on hover */
+            transform: scale(1.05); /* Slight scaling effect */
+        }
+
+        .rent-button:active {
+            background-color: #F29C11; /* Darker orange when clicked */
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #131921;
+            color: #F2F2F2;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">RentMyVehicle</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Vehicles</a></li>
+                <li><a href="#">Bookings</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Vehicle Listings Section -->
+    <section class="vehicle-listings">
+        <!-- Vehicle 1 -->
+        <div class="vehicle-card">
+            <div class="vehicle-image">
+                <img src="../pics/tesla-model-3.jpg" alt="Tesla Model 3" />
+            </div>
+            <div class="vehicle-info">
+                <h2>2022 Tesla Model 3</h2>
+                <p class="vehicle-description">Rent the all-electric, luxury Tesla Model 3 for your next adventure. With superior performance, innovative technology, and sustainability, it's the ideal vehicle for any journey.</p>
+                <div class="vehicle-specs">
+                    <p><strong>Model:</strong> 2022 Tesla Model 3</p>
+                    <p><strong>License Plate:</strong> XYZ 1234</p>
+                    <p><strong>Price per Day:</strong> €120</p>
+                    <p><strong>Status:</strong> Available</p>
+                </div>
+                <div class="rent-now">
+                    <button class="rent-button">Rent Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vehicle 2 -->
+        <div class="vehicle-card">
+            <div class="vehicle-image">
+                <img src="../pics/audi-e-tron.jpg" alt="Audi e-tron" />
+            </div>
+            <div class="vehicle-info">
+                <h2>2022 Audi e-tron</h2>
+                <p class="vehicle-description">Experience the power of electric driving with the Audi e-tron. A perfect blend of luxury, performance, and sustainability. Get ready for an unforgettable journey.</p>
+                <div class="vehicle-specs">
+                    <p><strong>Model:</strong> 2022 Audi e-tron</p>
+                    <p><strong>License Plate:</strong> ABC 5678</p>
+                    <p><strong>Price per Day:</strong> €150</p>
+                    <p><strong>Status:</strong> Available</p>
+                </div>
+                <div class="rent-now">
+                    <button class="rent-button">Rent Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vehicle 3 -->
+        <div class="vehicle-card">
+            <div class="vehicle-image">
+                <img src="../pics/bmw-i3.jpg" alt="BMW i3" />
+            </div>
+            <div class="vehicle-info">
+                <h2>2022 BMW i3</h2>
+                <p class="vehicle-description">Compact and stylish, the BMW i3 offers an urban driving experience with an eco-friendly twist. Perfect for city commutes and short trips.</p>
+                <div class="vehicle-specs">
+                    <p><strong>Model:</strong> 2022 BMW i3</p>
+                    <p><strong>License Plate:</strong> DEF 9101</p>
+                    <p><strong>Price per Day:</strong> €100</p>
+                    <p><strong>Status:</strong> Available</p>
+                </div>
+                <div class="rent-now">
+                    <button class="rent-button">Rent Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vehicle 4 -->
+        <div class="vehicle-card">
+            <div class="vehicle-image">
+                <img src="../pics/mercedes-eq.jpg" alt="Mercedes EQ" />
+            </div>
+            <div class="vehicle-info">
+                <h2>2022 Mercedes EQ</h2>
+                <p class="vehicle-description">Drive in style with the all-new electric Mercedes EQ. A combination of luxury, performance, and cutting-edge technology to take your journey to the next level.</p>
+                <div class="vehicle-specs">
+                    <p><strong>Model:</strong> 2022 Mercedes EQ</p>
+                    <p><strong>License Plate:</strong> GHI 1234</p>
+                    <p><strong>Price per Day:</strong> €180</p>
+                    <p><strong>Status:</strong> Available</p>
+                </div>
+                <div class="rent-now">
+                    <button class="rent-button">Rent Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="vehicle-card">
+            <div class="vehicle-image">
+                <img src="mercedes-eq.jpg" alt="lol" />
+            </div>
+            <div class="vehicle-info">
+                <h2>lol</h2>
+                <p class="vehicle-description">Don't Panic.</p>
+                <div class="vehicle-specs">
+                    <p><strong>Model:</strong> model 42</p>
+                    <p><strong>License Plate:</strong> XVX 1234</p>
+                    <p><strong>Price per Day:</strong> €180</p>
+                    <p><strong>Status:</strong> Available</p>
+                </div>
+                <div class="rent-now">
+                    <button class="rent-button">Rent Now</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 RentMyVehicle. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

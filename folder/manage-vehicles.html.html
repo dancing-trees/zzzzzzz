@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Vehicles - Admin Panel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="manage-vehicles.html">Manage Vehicles</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Manage Vehicles</h1>
+        </header>
+
+        <!-- Vehicle Management Table -->
+        <section class="vehicle-table">
+            <h2>All Vehicles</h2>
+            <table id="vehicle-table">
+                <thead>
+                    <tr>
+                        <th>Vehicle ID</th>
+                        <th>Model</th>
+                        <th>License Plate</th>
+                        <th>Price per Day</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="vehicle-list">
+                    <!-- Data will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Add New Vehicle Form -->
+        <section class="add-vehicle">
+            <h2>Add New Vehicle</h2>
+            <form id="vehicle-form">
+                <label for="model">Model</label>
+                <input type="text" id="model" name="model" required>
+
+                <label for="license_plate">License Plate</label>
+                <input type="text" id="license_plate" name="license_plate" required>
+
+                <label for="price">Price per Day (€)</label>
+                <input type="number" id="price" name="price" required>
+
+                <label for="status">Status</label>
+                <select id="status" name="status">
+                    <option value="available">Available</option>
+                    <option value="rented">Rented</option>
+                </select>
+
+                <button type="submit">Add Vehicle</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

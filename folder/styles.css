@@ -1,0 +1,170 @@
+
+/* Base style for the body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2C2C2C; /* Dark background */
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF; /* White text */
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #1E1E1E; /* Dark grey for sidebar */
+    color: white;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4); /* Soft shadow */
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #FFFFFF;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #D1D1D1; /* Light grey for links */
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #FFFFFF; /* White on hover */
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* Header styling */
+header h1 {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Vehicle Table Section */
+.vehicle-table {
+    background-color: #3A3A3A; /* Dark background for table */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+}
+
+.vehicle-table h2 {
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#vehicle-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#vehicle-table th,
+#vehicle-table td {
+    padding: 12px;
+    text-align: left;
+    color: #D1D1D1; /* Light grey text */
+}
+
+#vehicle-table th {
+    background-color: #4F4F4F; /* Darker grey for headers */
+}
+
+#vehicle-table td {
+    background-color: #333333; /* Dark table rows */
+}
+
+#vehicle-table tr:hover {
+    background-color: #444444; /* Slightly lighter grey on hover */
+}
+
+/* Add Vehicle Form */
+.add-vehicle {
+    background-color: #3A3A3A; /* Dark background for form */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.add-vehicle h2 {
+    color: #FFFFFF;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #D1D1D1;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid #555555; /* Dark border */
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #2C2C2C; /* Dark background for input fields */
+    color: #FFFFFF; /* White text in fields */
+}
+
+form button {
+    background-color: #4F4F4F; /* Darker grey button */
+    color: white;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #616161; /* Slightly lighter grey on hover */
+}
+
+form input:focus,
+form select:focus {
+    border-color: #4F4F4F; /* Lighter grey focus border */
+    outline: none;
+}
+
+/* Make it mobile responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .main-content {
+        margin-left: 220px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .vehicle-table h2,
+    .add-vehicle h2 {
+        font-size: 24px;
+    }
+}

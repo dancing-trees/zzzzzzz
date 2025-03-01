@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        :root {
+            /* Light Mode Colors */
+            --bg-color: #f8f9fa;
+            --box-bg: #e6e1ff;
+            --text-color: #333;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --glow-color: #6a0dad;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Dark Mode Colors */
+                --bg-color: #121212;
+                --box-bg: #1e1e1e;
+                --text-color: #e0e0e0;
+                --shadow-color: rgba(255, 255, 255, 0.1);
+                --glow-color: #bb86fc;
+            }
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: var(--bg-color);
+            transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+
+        .container {
+            background-color: var(--box-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 2px 2px 10px var(--shadow-color);
+            opacity: 0;
+            transform: translateY(-50px);
+            animation: fadeIn 1s ease-in-out forwards, slideIn 1s ease-in-out forwards;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .animated-image {
+            width: 80px; /* Adjust size */
+            height: 80px;
+            animation: bounce 1.5s infinite alternate ease-in-out;
+        }
+
+        .text {
+            font-weight: bold;
+            font-size: 18px;
+            color: var(--text-color);
+            animation: textGlow 2s infinite alternate;
+        }
+
+        .details {
+            font-size: 14px;
+            margin-top: 10px;
+            color: var(--text-color);
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: var(--text-color);
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+        .animated-image {
+    width: 170px;  /* Adjust the width */
+    height: auto;  /* Maintains the aspect ratio */
+    animation: bounce 1.5s infinite alternate ease-in-out;
+    }
+
+
+        @keyframes textGlow {
+            from {
+                color: var(--text-color);
+            }
+            to {
+                color: var(--glow-color);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXhiaXV2bWJ1bW9wamE0dG1zc2dodDd2OXd1bmZ1cHlwbzcwczNrOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/E8GfFH47PKeyI/giphy.gif" 
+                 alt="Celebration" class="animated-image" width="30px">
+        </div>
+        <div class="text">Your order is confirmed</div>
+        <div class="details">
+            > With vehicle number #666. <br>
+            > Find more details on your mail.
+        </div>
+        <div class="footer">Thank You</div>
+    </div>
+</body>
+</html>
